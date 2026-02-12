@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Reveal from "./Reveal";
 import UserFlow from "./UserFlow";
 import SupplementaryImages from "./SupplementaryImages";
@@ -10,10 +9,6 @@ type InitiativeProps = {
 };
 
 export default function Initiative({ initiative, index }: InitiativeProps) {
-  const [activeSegment, setActiveSegment] = useState<"notes" | "tradeoff">(
-    "notes",
-  );
-
   return (
     <section className="container-shell mt-20 md:mt-32">
       <Reveal>
@@ -76,64 +71,27 @@ export default function Initiative({ initiative, index }: InitiativeProps) {
       </Reveal>
 
       <Reveal className="panel mt-5">
-        <div className="inline-flex rounded-full  bg-ink/50 p-1">
-          <button
-            type="button"
-            onClick={() => setActiveSegment("notes")}
-            className={`rounded-full px-4 py-1.5 text-sm font-medium transition ${
-              activeSegment === "notes"
-                ? "bg-signal text-ink"
-                : "text-fog/80 hover:text-fog"
-            }`}
-            aria-pressed={activeSegment === "notes"}
-          >
-            Process notes
-          </button>
-          <button
-            type="button"
-            onClick={() => setActiveSegment("tradeoff")}
-            className={`rounded-full px-4 py-1.5 text-sm font-medium transition ${
-              activeSegment === "tradeoff"
-                ? "bg-signal text-ink"
-                : "text-fog/80 hover:text-fog"
-            }`}
-            aria-pressed={activeSegment === "tradeoff"}
-          >
-            Critical tradeoff
-          </button>
+        <h4 className="text-2xl">Process notes, outcomes and learning</h4>
+        <div className="mt-4">
+          <p className="text-base font-medium text-fog md:text-lg">Process notes</p>
+          <ul className="mt-3 space-y-2 text-base text-fog/80">
+            {[...initiative.develop, ...initiative.deliver].map((point) => (
+              <li key={point} className="flex gap-2">
+                <span className="mt-2 h-1.5 w-1.5 rounded-full bg-harbor" />
+                <span>{point}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-6 text-base font-medium text-fog md:text-lg">Outcomes and learning</p>
+          <ul className="mt-3 space-y-2 text-base text-fog/85">
+            {initiative.outcomes.map((point) => (
+              <li key={point} className="flex gap-2">
+                <span className="mt-2 h-1.5 w-1.5 rounded-full bg-moss" />
+                <span>{point}</span>
+              </li>
+            ))}
+          </ul>
         </div>
-
-        {activeSegment === "notes" ? (
-          <div className="mt-4">
-            <ul className="mt-3 space-y-2 text-sm text-fog/80">
-              {[...initiative.develop, ...initiative.deliver].map((point) => (
-                <li key={point} className="flex gap-2">
-                  <span className="mt-2 h-1.5 w-1.5 rounded-full bg-harbor" />
-                  <span>{point}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ) : (
-          <div className="mt-4">
-            <div className="mt-3 space-y-3 text-sm text-fog/85">
-              <p>
-                <span className="font-semibold text-fog">Decision: </span>
-                {initiative.tradeoff.decision}
-              </p>
-              <p>
-                <span className="font-semibold text-fog">Alternatives: </span>
-                {initiative.tradeoff.alternatives}
-              </p>
-              <p>
-                <span className="font-semibold text-fog">
-                  Why this choice:{" "}
-                </span>
-                {initiative.tradeoff.why}
-              </p>
-            </div>
-          </div>
-        )}
       </Reveal>
 
       {initiative.externalLink ? (
@@ -153,17 +111,6 @@ export default function Initiative({ initiative, index }: InitiativeProps) {
         </Reveal>
       ) : null}
 
-      <Reveal className="panel mt-5 bg-ink/60" delay={0.12}>
-        <h4 className="text-xl">Outcomes and learning</h4>
-        <ul className="mt-3 space-y-2 text-sm text-fog/85 md:text-base">
-          {initiative.outcomes.map((point) => (
-            <li key={point} className="flex gap-2">
-              <span className="mt-2 h-1.5 w-1.5 rounded-full bg-moss" />
-              <span>{point}</span>
-            </li>
-          ))}
-        </ul>
-      </Reveal>
     </section>
   );
 }

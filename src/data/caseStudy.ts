@@ -136,8 +136,8 @@ export const initiatives: Initiative[] = [
     ],
     supplementaryImages: [
       {
-        title: 'Spreadsheet-to-table transition',
-        caption: 'Journey mapping how teams moved from manual spreadsheets to collaborative table workflows.',
+        title: 'A live prototype',
+        caption: 'I used AI to generate a live prototype of the table view to help the team to understand the product and the features. No Figma files has been created until we validated the product direction and the features. The table above is built by me to showcase the features and the interactions at www.beacon.com',
         image: './beacont-anim.gif',
       },
 
