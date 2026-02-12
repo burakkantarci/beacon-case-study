@@ -7,21 +7,6 @@ const operatingFriction = [
   "Teams repeatedly rebuilt shared understanding before making operational decisions.",
 ];
 
-const painPoints = [
-  {
-    title: "Fragmented truth",
-    text: "Multiple records existed for the same shipment context, causing version mismatch and rework.",
-  },
-  {
-    title: "Slow collaboration loops",
-    text: "Every clarification triggered new screenshot-and-email loops instead of in-product alignment.",
-  },
-  {
-    title: "Low confidence handoffs",
-    text: "Teams could not reliably confirm if downstream stakeholders were acting on the latest information.",
-  },
-];
-
 export default function ProblemSpace() {
   return (
     <section className="container-shell mt-20 md:mt-32">
