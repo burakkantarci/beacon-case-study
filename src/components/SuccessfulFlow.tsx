@@ -3,44 +3,42 @@ import Reveal from "./Reveal";
 const flow = [
   {
     step: "Sign Up",
-    detail: "Creates a Beacon workspace and confirms company profile details.",
+    detail:
+      "A workspace that brings all stakeholders together to collaborate in real-time.",
   },
   {
     step: "Import Tracking Spreadsheet",
     detail:
-      "Uploads the supply chain tracking spreadsheet and validates records, creating a live operational view.",
+      "Instead of static spreadsheets, Beacon imports the tracking spreadsheet and creates a live operational view.",
   },
   {
     step: "Data Alignment",
     detail:
-      "Uses Beacon guidance to align spreadsheet columns with required fields.",
+      "Beacon automatically aligns the tracking spreadsheet with the required fields. Helping users to adopt quickly.",
   },
   {
-    step: "AI ETA Enrichment",
+    step: "ETA Fetching",
     detail:
-      "Beacon enriches imported data with automated ETA predictions and confidence-aware updates.",
+      "Beacon automatically fetches the ETA based on the tracking spreadsheet. No more manual updates.",
   },
   {
-    step: "Table View Setup",
+    step: "Live Board Setup",
     detail:
-      "Creates and saves role-based table views so routine checks and decisions are one click for every team.",
+      "User creates and saves custom views so routine checks are one click for the team.",
   },
   {
-    step: "Share Live View",
+    step: "Share Live Board",
     detail:
-      "Shares a live view with forwarders and internal collaborators so everyone works on the same current context.",
+      "Shares the live board with forwarders and internal collaborators, allowing them to collaborate in real-time.",
   },
 ];
 
 export default function SuccessfulFlow() {
   return (
-    <section className="container-shell mt-16 md:mt-24">
+    <section className="container-shell mt-20 md:mt-32">
       <Reveal>
-        <p className="section-eyebrow">A Successful User Journey</p>
-        <h2 className="section-lede">
-          A successful Beacon journey starts with spreadsheet import and ends in
-          AI-assisted collaboration on a shared table view.
-        </h2>
+        <p className="section-eyebrow">How Beacon solves the problem</p>
+        <h2 className="section-lede">A successful Beacon user journey</h2>
       </Reveal>
 
       <Reveal className="panel mt-8 overflow-hidden p-6 md:p-8">
@@ -54,7 +52,9 @@ export default function SuccessfulFlow() {
               <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-signal/80">
                 Step {idx + 1}
               </p>
-              <h3 className="mt-2 text-xl text-fog">{item.step}</h3>
+              <h3 className="mt-2 text-2xl text-fog leading-relaxed">
+                {item.step}
+              </h3>
               <p className="mt-2 text-sm leading-relaxed text-fog/75">
                 {item.detail}
               </p>

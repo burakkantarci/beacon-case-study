@@ -74,7 +74,7 @@ function App() {
         <DoubleDiamond />
       </div>
       <div id="initiatives" className="scroll-mt-24">
-        <section className="container-shell mt-16 md:mt-24">
+        <section className="container-shell mt-20 md:mt-32">
           <h2 className="mt-2 text-4xl md:text-6xl">Design Initiatives</h2>
         </section>
         {orderedInitiatives.map((initiative, index) => (

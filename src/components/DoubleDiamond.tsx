@@ -3,9 +3,9 @@ import { processPhases } from "../data/caseStudy";
 
 export default function DoubleDiamond() {
   return (
-    <section className="container-shell mt-16 md:mt-24">
+    <section className="container-shell mt-20 md:mt-32">
       <Reveal>
-        <p className="section-eyebrow">Process</p>
+        <p className="section-eyebrow">Design Process</p>
         <h2 className="section-lede">
           Double Diamond thinking to move from broad signals to focused
           decisions.

@@ -2,34 +2,34 @@ import Reveal from "./Reveal";
 import SupplementaryImageCard from "./SupplementaryImageCard";
 
 const operatingFriction = [
-  "Shipment context lived in static spreadsheets and message threads that drifted out of sync quickly.",
-  "ETA expectations were often recalculated manually, creating uncertainty in downstream decisions.",
-  "Teams repeatedly rebuilt context because shared views were not live, consistent, or collaboration-ready.",
+  "Order, document, and shipment context was split across email threads, spreadsheets, and siloed tools.",
+  "Procurement, sales, forwarders, and logistics teams often entered the process at different times with partial context.",
+  "Teams repeatedly rebuilt shared understanding before making operational decisions.",
 ];
 
 const painPoints = [
   {
     title: "Fragmented truth",
-    text: "Different stakeholders worked from different spreadsheet versions, causing rework and conflicting decisions.",
+    text: "Multiple records existed for the same shipment context, causing version mismatch and rework.",
   },
   {
     title: "Slow collaboration loops",
-    text: "Clarifications depended on screenshot-and-email loops rather than a shared, live workspace.",
+    text: "Every clarification triggered new screenshot-and-email loops instead of in-product alignment.",
   },
   {
     title: "Low confidence handoffs",
-    text: "Without automated ETA and shared context, handoffs relied on assumptions instead of trusted data.",
+    text: "Teams could not reliably confirm if downstream stakeholders were acting on the latest information.",
   },
 ];
 
 export default function ProblemSpace() {
   return (
-    <section className="container-shell mt-16 md:mt-24">
+    <section className="container-shell mt-20 md:mt-32">
       <Reveal>
-        <p className="section-eyebrow">Problem Space</p>
+        <p className="section-eyebrow">Problem</p>
         <h2 className="section-lede max-w-4xl">
-          The core gap was not data collection. It was turning spreadsheet-heavy
-          operations into AI-assisted, shared decision workflows.
+          The real issue in the supply chain was teams working with disconnected
+          information.
         </h2>
       </Reveal>
 
@@ -58,24 +58,24 @@ export default function ProblemSpace() {
         </ul>
       </Reveal>
 
-      <div className="mt-5 grid gap-4 md:grid-cols-3">
+      {/* <div className="mt-5 grid gap-4 md:grid-cols-3">
         {painPoints.map((item, idx) => (
           <Reveal key={item.title} className="panel" delay={idx * 0.06}>
             <p className="font-display text-2xl text-rust">{item.title}</p>
             <p className="mt-2 text-sm text-fog/80 md:text-base">{item.text}</p>
           </Reveal>
         ))}
-      </div>
+      </div> */}
 
-      <Reveal className="panel mt-5 bg-ink/60" delay={0.08}>
+      {/* <Reveal className="panel mt-5 bg-ink/60" delay={0.08}>
         <h3 className="text-2xl">Why this mattered for Beacon</h3>
         <p className="mt-3 text-sm text-fog/80 md:text-base">
-          Beacon needed a strategic product shift that could preserve spreadsheet
-          familiarity while introducing stronger value: automated ETA reasoning
-          and shareable views that support real collaboration, not static
-          reporting.
+          When context breaks, visibility alone does not help teams act. Beacon
+          needed collaboration patterns that brought stakeholders into a shared
+          operational narrative earlier, with less manual reconstruction and
+          higher confidence in execution.
         </p>
-      </Reveal>
+      </Reveal> */}
     </section>
   );
 }

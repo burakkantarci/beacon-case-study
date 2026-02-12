@@ -22,13 +22,13 @@ export default function Hero() {
           <p className="section-eyebrow text-sand">Case Study</p>
         </div>
         <h1 className="mt-5 max-w-4xl text-4xl leading-[1.05] md:text-6xl">
-          Beacon's strategic shift: from static spreadsheets to AI-powered table
-          collaboration.
+          Supply chain runs on coordination. <br />I designed the collaboration
+          layer.
         </h1>
         <p className="mt-6 max-w-2xl text-base text-fog/90 md:text-lg">
-          A single-page case study on how I used rapid vibe-coded prototypes to
-          align leadership, product, sales, and engineering while minimizing
-          Figma-heavy work and shipping faster.
+          A single-page case study showing how I framed messy stakeholder
+          workflows, mapped clearer user flows, and delivered product outcomes
+          for Beacon&apos;s customers.
         </p>
         <div className="mt-9 flex flex-wrap items-center gap-3 text-sm">
           <span className="rounded-full border border-fog/20 px-3 py-1">

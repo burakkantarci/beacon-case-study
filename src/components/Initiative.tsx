@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Reveal from "./Reveal";
 import UserFlow from "./UserFlow";
 import SupplementaryImages from "./SupplementaryImages";
@@ -9,8 +10,12 @@ type InitiativeProps = {
 };
 
 export default function Initiative({ initiative, index }: InitiativeProps) {
+  const [activeSegment, setActiveSegment] = useState<"notes" | "tradeoff">(
+    "notes",
+  );
+
   return (
-    <section className="container-shell mt-16 md:mt-24">
+    <section className="container-shell mt-20 md:mt-32">
       <Reveal>
         <p className="section-eyebrow">
           Initiative {String(index + 1).padStart(2, "0")}
@@ -49,38 +54,6 @@ export default function Initiative({ initiative, index }: InitiativeProps) {
         </Reveal>
       </div>
 
-      <div className="mt-5 grid gap-5 md:grid-cols-2">
-        <Reveal className="panel">
-          <h4 className="text-xl">Notes about the process</h4>
-          <ul className="mt-3 space-y-2 text-sm text-fog/80">
-            {[...initiative.develop, ...initiative.deliver].map((point) => (
-              <li key={point} className="flex gap-2">
-                <span className="mt-2 h-1.5 w-1.5 rounded-full bg-harbor" />
-                <span>{point}</span>
-              </li>
-            ))}
-          </ul>
-        </Reveal>
-
-        <Reveal className="panel" delay={0.05}>
-          <h4 className="text-xl">Critical tradeoff</h4>
-          <div className="mt-3 space-y-3 text-sm text-fog/85">
-            <p>
-              <span className="font-semibold text-fog">Decision: </span>
-              {initiative.tradeoff.decision}
-            </p>
-            <p>
-              <span className="font-semibold text-fog">Alternatives: </span>
-              {initiative.tradeoff.alternatives}
-            </p>
-            <p>
-              <span className="font-semibold text-fog">Why this choice: </span>
-              {initiative.tradeoff.why}
-            </p>
-          </div>
-        </Reveal>
-      </div>
-
       <Reveal className="mt-5" delay={0.1}>
         <SupplementaryImages
           images={initiative.supplementaryImages}
@@ -90,14 +63,77 @@ export default function Initiative({ initiative, index }: InitiativeProps) {
               : undefined
           }
           videoTitle={
-            initiative.title === "Live Boards" ? "Live Boards walkthrough" : undefined
+            initiative.title === "Live Boards"
+              ? "Live Boards walkthrough"
+              : undefined
           }
           videoDescription={
             initiative.title === "Live Boards"
-              ? "Product demo showing core collaboration flows and board interactions."
+              ? "This is me talking about the comments :)"
               : undefined
           }
         />
+      </Reveal>
+
+      <Reveal className="panel mt-5">
+        <div className="inline-flex rounded-full  bg-ink/50 p-1">
+          <button
+            type="button"
+            onClick={() => setActiveSegment("notes")}
+            className={`rounded-full px-4 py-1.5 text-sm font-medium transition ${
+              activeSegment === "notes"
+                ? "bg-signal text-ink"
+                : "text-fog/80 hover:text-fog"
+            }`}
+            aria-pressed={activeSegment === "notes"}
+          >
+            Process notes
+          </button>
+          <button
+            type="button"
+            onClick={() => setActiveSegment("tradeoff")}
+            className={`rounded-full px-4 py-1.5 text-sm font-medium transition ${
+              activeSegment === "tradeoff"
+                ? "bg-signal text-ink"
+                : "text-fog/80 hover:text-fog"
+            }`}
+            aria-pressed={activeSegment === "tradeoff"}
+          >
+            Critical tradeoff
+          </button>
+        </div>
+
+        {activeSegment === "notes" ? (
+          <div className="mt-4">
+            <ul className="mt-3 space-y-2 text-sm text-fog/80">
+              {[...initiative.develop, ...initiative.deliver].map((point) => (
+                <li key={point} className="flex gap-2">
+                  <span className="mt-2 h-1.5 w-1.5 rounded-full bg-harbor" />
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : (
+          <div className="mt-4">
+            <div className="mt-3 space-y-3 text-sm text-fog/85">
+              <p>
+                <span className="font-semibold text-fog">Decision: </span>
+                {initiative.tradeoff.decision}
+              </p>
+              <p>
+                <span className="font-semibold text-fog">Alternatives: </span>
+                {initiative.tradeoff.alternatives}
+              </p>
+              <p>
+                <span className="font-semibold text-fog">
+                  Why this choice:{" "}
+                </span>
+                {initiative.tradeoff.why}
+              </p>
+            </div>
+          </div>
+        )}
       </Reveal>
 
       {initiative.externalLink ? (

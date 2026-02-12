@@ -3,7 +3,7 @@ import { executiveSummary } from '../data/caseStudy'
 
 export default function ExecutiveSummary() {
   return (
-    <section className="container-shell mt-10 md:mt-14">
+    <section className="container-shell mt-16 md:mt-24">
       <Reveal className="panel">
         <p className="section-eyebrow">90-Second Summary</p>
 

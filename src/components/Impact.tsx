@@ -1,19 +1,21 @@
-import Reveal from './Reveal'
+import Reveal from "./Reveal";
 
 const reflections = [
-  'Vibe-coded prototypes accelerated strategic alignment more effectively than static decks alone.',
-  'Keeping spreadsheet familiarity while adding AI ETA automation reduced adoption friction.',
-  'Lean Figma output plus clear engineering handoff improved speed without sacrificing quality.',
-]
+  "Shifted from feature-level execution to product-direction thinking by shaping collaboration as Beacon's core value story.",
+  "Built stronger persona-based design judgment by mapping how logistics, sales, and procurement collaborate across the same workflow.",
+  "Learned to use AI prototyping to test interaction ideas faster and validate design decisions with shorter feedback loops.",
+  "Raised delivery quality through clearer handoff artifacts, behavior specs, and tighter alignment with engineering and stakeholders.",
+];
 
 export default function Impact() {
   return (
-    <section className="container-shell mb-16 mt-16 md:mb-24 md:mt-24">
+    <section className="container-shell mb-20 mt-20 md:mb-32 md:mt-32">
       <Reveal className="relative overflow-hidden rounded-[2rem] bg-ink p-8 text-fog md:p-12">
         <div className="absolute -bottom-10 right-0 h-56 w-56 rounded-full bg-signal/20 blur-3xl" />
         <p className="section-eyebrow text-sand">Impact and Reflection</p>
         <h2 className="section-lede">
-          The core contribution was enabling Beacon's strategic shift to AI-powered table collaboration with faster cross-functional alignment.
+          The biggest impact was how this work improved my craft as a product
+          designer, from strategy to execution.
         </h2>
         <ul className="mt-6 space-y-3 text-fog/90">
           {reflections.map((item) => (
@@ -24,8 +26,8 @@ export default function Impact() {
           ))}
         </ul>
         <p className="mt-6 text-sm text-fog/70">
-          NDA note: This case study intentionally abstracts customer-sensitive data while preserving process
-          rigor and design rationale.
+          NDA note: This case study intentionally abstracts customer-sensitive
+          data while preserving process rigor and design rationale.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
           <a
@@ -36,16 +38,8 @@ export default function Impact() {
           >
             See full portfolio
           </a>
-          <a
-            href="https://burakkantarci.com/"
-            target="_blank"
-            rel="noreferrer"
-            className="rounded-full border border-fog/30 px-4 py-2 text-sm text-fog/90 transition hover:border-fog/60"
-          >
-            Discuss this case study
-          </a>
         </div>
       </Reveal>
     </section>
-  )
+  );
 }

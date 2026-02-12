@@ -37,14 +37,14 @@ export type Initiative = {
 
 export const executiveSummary = {
   problem:
-    'Beacon needed a strategic shift from static spreadsheets to AI-powered collaborative table views with automated ETA intelligence and shareable execution context.',
-  role: 'Senior Product Designer driving strategy-to-shipping alignment with leadership, product, sales, and engineering through rapid vibe-coded prototypes and focused UX direction.',
+    'Collaboration in supply chain operations was fragmented across screenshots, email threads, and disconnected spreadsheets.',
+  role: 'Senior Product Designer leading AI-enabled discovery, flow design, rapid prototyping, interaction direction, and developer handoff.',
   shipped:
-    'Live Boards, Table View, Order Cards, and New Onboarding: shipped to move teams from manual spreadsheet coordination to AI-assisted collaboration, faster ETA-driven decisions, and shareable operational views.',
+    'Shipped four connected initiatives: Live Boards for real-time shared coordination, AI-assisted Table View for live ETA visibility, Order Cards to link planning to execution, and role-based Onboarding to accelerate first meaningful actions.',
   impactSignals: [
-    'Cross-functional teams aligned faster on roadmap and tradeoffs through interactive prototype reviews.',
-    'AI ETA and shared table-view workflows reduced manual update loops in day-to-day operations.',
-    'Lean design artifacts with rapid prototyping reduced Figma overhead while preserving delivery speed.',
+    'I helped steer a strategic shift from fragmented visibility tooling toward a collaboration-first product direction.',
+    'I strengthened my designer toolkit by using AI prototyping to test ideas faster and validate decisions earlier.',
+    'I improved cross-functional delivery quality through clearer persona-driven interaction design and stronger engineering handoff.',
   ],
 } as const
 
@@ -60,21 +60,27 @@ export const initiatives: Initiative[] = [
     ],
     supplementaryImages: [
       {
-        title: 'As-is collaboration workflow',
-        caption: 'Sanitized map of screenshot + email loops before Live Boards.',
+        title: 'Live Board example',
+        caption: 'A clear information hierarchy starting with the contextual information and going down to the details. Main collaboration actions like Share, Comment are designed to be one click for the team.',
         image: 'https://burakkantarci.com/images/beacon/order-boards-3.png',
       },
       {
-        title: 'Concept evolution',
-        caption: 'Wireframe-to-hi-fi progression with rejected options annotated.',
+        title: 'Widgets for the Live Board',
+        caption: 'In addition to the main cards, collaboration widgets are designed to be familiar and easy to use.',
+        image: './live-board.png',
+
       },
       {
         title: 'Comment interaction details',
-        caption: 'Final interaction states for in-context commenting and archived rows.',
+        caption: 'Commenting for a specific shipment designed to be easier than the traditional screenshot + email loops. This designed also enabled users to have discussion around the shipment in the context of the board.',
+        image: './live-board-commentexpanded.png',
+
       },
       {
         title: 'Handoff snapshot',
         caption: 'Developer-facing behavior specs for primary and edge states.',
+        image: './live-board-handover.png',
+
       },
     ],
     artifactSlots: {
@@ -112,17 +118,17 @@ export const initiatives: Initiative[] = [
       'Delivered specs and Loom walkthroughs to reduce engineering ambiguity.',
     ],
     outcomes: [
-      'Directional impact: customer feedback indicated fewer screenshot-driven update loops.',
-      'Directional impact: support conversations shifted from "where is context?" to decision-level questions.',
-      'Directional impact: collaboration narrative became stronger in Beacon sales positioning.',
+      'Complete strategic shift in the company\'s product direction.',
+      'A first step towards to build a collaborative platform for the supply chain. As a designer, it was a great opportunity to understand how collaboration works in the supply chain.',
+      'I improved the way of thinking for different personas and how to design for them.',
     ],
   },
   {
     title: 'Table view',
     context:
-      'Beacon needed a collaboration-first table view that felt familiar like a spreadsheet, but outperformed it with AI-powered ETA automation and shareable, always-current operational views.',
+      'Logistics teams were working from static spreadsheets that became outdated quickly, forcing manual ETA checks and repeated status-chasing across stakeholders.',
     numberedFlow: [
-      'Import operational shipment data into Beacon to initialize a live table view.',
+      'Import shipment data into Beacon to initialize a live table view.',
       'Map key columns so AI can enrich tracking states and estimate ETAs automatically.',
       'Save filtered table configurations as shareable views for role-specific workflows.',
       'Collaborate in a single view with comments and updates tied to the same records.',
@@ -161,19 +167,16 @@ export const initiatives: Initiative[] = [
       { title: 'Share a single live view for decisions', owner: 'All stakeholders', status: 'improved' },
     ],
     develop: [
-      'Vibe-coded interaction prototypes to test strategy and UX direction directly with cross-functional partners.',
-      'Minimized heavy Figma production and focused on rapid, decision-ready artifacts.',
-      'Iterated table layout, AI ETA confidence states, and sharing affordances in short feedback loops.',
+      'AI-coded quick prototypes replaced heavy Figma exploration.',
+      'Tested ETA states and shared-view behavior in rapid feedback loops.',
     ],
     deliver: [
-      'Delivered clear behavior specs for AI ETA updates, stale-data states, and saved-view permissions.',
-      'Aligned leadership, PM, sales, and engineering with prototype walkthroughs and concise rationale docs.',
-      'Shipped a table-view foundation that could scale into broader AI collaboration workflows.',
+      'Shipped concise specs for AI ETA updates and stale-data handling.',
+      'Used short prototype walkthroughs to align leadership, PM, sales, and engineering.',
     ],
     outcomes: [
-      'Directional impact: Beacon positioned a clear strategic difference from generic spreadsheets in both product story and demos.',
-      'Directional impact: teams spent less time reconciling conflicting versions and more time acting on shared, current views.',
-      'Directional impact: rapid prototyping shortened alignment cycles while keeping implementation momentum high.',
+      'Beacon positioned a clear strategic difference from generic spreadsheets in both product story and demos.',
+      'I as a designer, learned how to use AI to speed up the design process and how to use rapid prototyping to validate the design decisions.',
     ],
     externalLink: {
       label: 'Open interactive table view',
@@ -185,34 +188,33 @@ export const initiatives: Initiative[] = [
     context:
       'Order information often entered Beacon too late, creating weak linkage between commercial planning and shipment execution. Order Cards established a single source of truth that connected order readiness directly to downstream shipment tracking and decision-making.',
     numberedFlow: [
-      'Create an order card at planning stage with essential commercial and operational fields.',
-      'Link the order card to shipment planning milestones so execution readiness is explicit.',
-      'Update status and dependencies in one place as cross-functional inputs evolve.',
-      'Share the card with procurement, sales, and logistics for synchronized decisions.',
+      'Create an order at the planning stage with essential commercial and operational fields.',
+      'Link the order card to shipments so execution readiness is explicit.',
+      'Share the Live Board with procurement, sales, and logistics for synchronized decisions.',
       'Transition into shipment execution using the same order context as source of truth.',
     ],
     supplementaryImages: [
       {
-        title: 'Order-to-shipment linkage model',
-        caption: 'Flow diagram connecting order readiness to shipment execution triggers.',
+        title: 'Order card anatomy',
+        caption: 'Designed to be a single source of truth for the order lifecycle. Supplementary information is available when needed.',
         image: 'https://burakkantarci.com/images/beacon/order-cards-1.png',
       },
       {
-        title: 'Card model variants',
-        caption: 'Exploration of dense vs progressive-disclosure card structures.',
+        title: 'Adding inline data',
+        caption: 'Essential fields are editable to make the collaboration more efficient.',
         image: './order-card-1.png',
 
       },
       {
-        title: 'Status language framework',
-        caption: 'Shared terminology map for sales, procurement, and logistics users.',
+        title: 'Handoff snapshot',
+        caption: 'Created a handoff snapshot to help the team to understand the order context and the card interactions.',
         image: './order-card-2.png',
         
 
       },
       {
-        title: 'Execution handoff blueprint',
-        caption: 'Spec frames for blocked, changed, and relinked order states.',
+        title: 'Shipment connection',
+        caption: 'To keep the card as a single source of truth, the shipment connection is designed to be a single click.',
         image: './order-card-3.png',
 
       },
@@ -231,9 +233,8 @@ export const initiatives: Initiative[] = [
         'Execution teams needed immediate clarity on order readiness before shipment actions; deeper detail remained available without slowing operational decisions.',
     },
     discover: [
-      'Mapped where order context broke before shipment planning began, especially between commercial and operations teams.',
-      'Reviewed planning calls where shipment decisions were blocked by missing order readiness signals.',
-      'Identified the minimal order metadata needed to unblock reliable shipment execution.',
+      'Mapped how an order lifecycle is and how it is connected to the shipment lifecycle.',
+      'Conducte user interviews to understand the pain points of the users and the current workflows.',
     ],
     defineFlow: [
       { title: 'Sales captures order context in external docs', owner: 'Sales', status: 'pain' },
@@ -244,19 +245,16 @@ export const initiatives: Initiative[] = [
       { title: 'Cross-team decisions tracked in one operational context', owner: 'All stakeholders', status: 'improved' },
     ],
     develop: [
-      'Tested card hierarchy to prioritize fields directly affecting shipment execution readiness.',
-      'Explored interaction patterns that made order-to-shipment linking explicit and actionable.',
-      'Validated whether the proposed model reduced decision latency during cross-functional reviews.',
+      'Tested card layouts to keep fields easy to scan.',
+      'Tried linking patterns so teams could connect orders to shipments quickly.',
     ],
     deliver: [
-      'Shipped order cards as a unifying object connecting order readiness to shipment-level actions.',
-      'Introduced consistent status language to reduce interpretation mismatch across teams.',
-      'Created detailed handoff specs clarifying behavior for new, changed, blocked, and relinked orders.',
+      'Standardized status labels so teams interpreted updates the same way.',
     ],
     outcomes: [
-      'Anonymized range impact: order-to-shipment alignment steps were completed around 20-30% faster in pilot workflows.',
-      'Anonymized range impact: repeated context handoff cycles before execution dropped by roughly 15-25%.',
-      'Anonymized range impact: earlier cross-team alignment improved readiness confidence by an estimated 20%+ in planning reviews.',
+      'It created not much of a huge product impact. But created new upsell opportunities for the team.',
+      'Helped me to push for the new interactions and the new features.',
+      'Improved the way of handover the design work to the engineering team.',
     ],
   },
   {
@@ -264,11 +262,11 @@ export const initiatives: Initiative[] = [
     context:
       'New users entered Beacon through a generic setup path that delayed first-value moments. The new onboarding experience personalized setup by role and accelerated time-to-first-meaningful-action in real supply chain workflows.',
     numberedFlow: [
-      'Sign up and confirm workspace profile to initialize the onboarding context.',
+      'Sign up and confirm profile to initialize the onboarding context.',
       'Select role so Beacon tailors setup tasks to relevant responsibilities.',
-      'Complete role-specific essentials such as invites, tracking setup, and core preferences.',
-      'Import initial operational data (including tracking spreadsheet) to activate real workflows.',
-      'Reach first meaningful action with teammates in a live supply chain collaboration flow.',
+      'Complete role-specific essentials.',
+      'Import initial operational data (including tracking spreadsheet) to activate live boards.',
+      'Reach first meaningful action in a live supply chain collaboration.',
     ],
     supplementaryImages: [
       {
@@ -288,7 +286,7 @@ export const initiatives: Initiative[] = [
       },
       {
         title: 'Progressive guidance patterns',
-        caption: 'UI states for prompts, milestone progress, and revisit behavior.',
+        caption: 'UI states for prompts, milestone progress.',
         image: './progress-bar.png',
       },
       {
@@ -311,7 +309,7 @@ export const initiatives: Initiative[] = [
     },
     discover: [
       'Analyzed drop-off points between signup and first meaningful workflow completion with execution-time focus.',
-      'Interviewed teams to isolate role-specific blockers that delayed first-value actions.',
+      'Interviewed sales and customer success to understand how they onboarded new customers.',
       'Captured where users completed setup steps but still could not execute core operational tasks.',
     ],
     defineFlow: [
@@ -323,14 +321,12 @@ export const initiatives: Initiative[] = [
       { title: 'User reaches first meaningful supply chain workflow', owner: 'New user + team', status: 'improved' },
     ],
     develop: [
-      'Designed role-driven onboarding with explicit progress states and predictable branch behavior.',
-      'Prioritized only the setup tasks that unlocked first meaningful supply-chain actions.',
-      'Refined sequence logic and copy to reduce time spent on non-critical onboarding steps.',
+      'Designed role-driven onboarding with explicit progress states.',
+      'Prioritized only the setup tasks that unlocked first meaningful actions.',
+      'Refined sequence logic and copy to reduce time spent on non-critical steps.',
     ],
     deliver: [
-      'Shipped personalized onboarding paths connected to core collaboration workflows.',
-      'Added contextual prompts for team invites, data setup, and first workflow completion.',
-      'Documented state logic and edge rules for engineers to ensure predictable execution across paths.',
+      'Shipped personalized onboarding paths connected to core Live Boards.',
     ],
     outcomes: [
       'Time to first meaningful action improved by after onboarding redesign.',

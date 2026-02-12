@@ -4,20 +4,19 @@ import SupplementaryImageCard from "./SupplementaryImageCard";
 const beaconContext = [
   "Beacon is a London-based B2B SaaS platform for supply chain visibility and collaboration.",
   "Customers like Fever-Tree and TATA use Beacon to coordinate shipments across multiple stakeholders.",
-  "The strategic opportunity was to move beyond static spreadsheets into AI-powered collaboration table views.",
-  "Differentiation came from automated ETA intelligence and shareable live views that kept teams aligned on one source of truth.",
+  "The product sits at the intersection of real-time tracking data and operational collaboration.",
 ];
 
 const ownershipScope = [
-  "I led strategy-to-delivery design for the table-view shift: framing, flow architecture, and interaction direction.",
-  "I used vibe-coded prototypes as a primary alignment artifact across leadership, product, sales, and engineering.",
-  "I intentionally kept Figma output lean, focusing only on assets needed to ship with confidence.",
-  "My north star was faster cross-functional alignment and faster time-to-meaningful collaborative action.",
+  "I led discovery-to-delivery for collaboration workflows.",
+  "I translated cross-functional research into product and design decisions.",
+  "I partnered with Leadership, PMs, engineering, sales and customer success to deliver the product.",
+  "I led the team to adopt AI in day-to-day product work.",
 ];
 
 export default function Context() {
   return (
-    <section className="container-shell mt-16 space-y-8 md:mt-24">
+    <section className="container-shell mt-20 space-y-8 md:mt-32">
       <Reveal>
         <SupplementaryImageCard
           title="Beacon Live Board"
@@ -30,13 +29,13 @@ export default function Context() {
       <Reveal>
         <p className="section-eyebrow">Context</p>
         <h2 className="section-lede">
-          Beacon turned spreadsheet workflows into AI-powered collaborative table views
+          Beacon builds the collaboration layer around supply chain visibility
         </h2>
       </Reveal>
 
       <div className="grid gap-5 md:grid-cols-2">
         <Reveal className="panel">
-          <h3 className="text-2xl">Beacon and product context</h3>
+          <h3 className="text-2xl">About Beacon</h3>
           <ul className="mt-4 space-y-2 text-sm text-fog/85 md:text-base">
             {beaconContext.map((item) => (
               <li key={item} className="flex gap-3">
