@@ -37,14 +37,14 @@ export type Initiative = {
 
 export const executiveSummary = {
   problem:
-    'Collaboration in supply chain operations was fragmented across screenshots, email threads, and disconnected spreadsheets.',
+    'Supply chain teams were making operational decisions using outdated screenshots, buried email threads, and spreadsheets that drifted out of sync within hours with no shared source of truth between roles.',
   role: 'Senior Product Designer leading AI-enabled discovery, flow design, rapid prototyping, interaction direction, and developer handoff.',
   shipped:
-    'Shipped four connected initiatives: Live Boards for real-time shared coordination, AI-assisted Table View for live ETA visibility, Order Cards to link planning to execution, and role-based Onboarding to accelerate first meaningful actions.',
+    'Designed and shipped four connected initiatives — each solving a specific breakpoint in the collaboration loop: Live Boards replaced screenshot-and-email coordination; Table View used AI to keep ETA data current; Order Cards connected planning decisions to shipment execution; role-based Onboarding cut the path to first meaningful action.',
   impactSignals: [
-    'I helped steer a strategic shift from fragmented visibility tooling toward a collaboration-first product direction.',
-    'I strengthened my designer toolkit by using AI prototyping to test ideas faster and validate decisions earlier.',
-    'I improved cross-functional delivery quality through clearer persona-driven interaction design and stronger engineering handoff.',
+    'Helped steer a strategic shift from fragmented visibility tooling toward a collaboration-first product direction.',
+    'Brought AI-coded prototyping into the design workflow to validate ideas faster and cut down on high-fidelity dead ends.',
+    'Improved engineering handoffs by shipping behavior specs that covered edge states explicitly.',
   ],
 } as const
 
@@ -108,7 +108,7 @@ export const initiatives: Initiative[] = [
       { title: 'Open shared board with live comments', owner: 'Forwarder', status: 'improved' },
     ],
     develop: [
-      'Explored three board architectures and rejected one that overloaded metadata upfront.',
+      'Explored three board layouts: metadata-heavy cards, minimal status rows, and context-first cards with progressive disclosure. Rejected the metadata-heavy approach after prototype testing showed users were overwhelmed before reaching the actions they came for.',
       'Mapped a to-be flow with fewer handoffs and clearer ownership.',
       'Prototyped in Figma to validate if commenting next to shipments reduced context switching.',
     ],
@@ -120,7 +120,7 @@ export const initiatives: Initiative[] = [
     outcomes: [
       'Complete strategic shift in the company\'s product direction.',
       'A first step towards to build a collaborative platform for the supply chain. As a designer, it was a great opportunity to understand how collaboration works in the supply chain.',
-      'I improved the way of thinking for different personas and how to design for them.',
+      'his initiative sharpened my multi-persona design instinct: a logistics manager checking ETAs, a procurement lead verifying order readiness, and a freight forwarder confirming booking details all needed the same board but different entry points into it.',
     ],
   },
   {
@@ -137,7 +137,7 @@ export const initiatives: Initiative[] = [
     supplementaryImages: [
       {
         title: 'A live prototype',
-        caption: 'I used AI to generate a live prototype of the table view to help the team to understand the product and the features. No Figma files has been created until we validated the product direction and the features. The table above is built by me to showcase the features and the interactions at www.beacon.com',
+        caption: 'I built this working prototype using AI-generated code — no Figma files until we validated the product direction. The live prototype let leadership, PM, and engineering interact with real data states (stale ETAs, missing carriers) rather than interpret static mockups.',
         image: './beacont-anim.gif',
       },
 
@@ -154,7 +154,7 @@ export const initiatives: Initiative[] = [
       why: 'The familiar model reduced adoption risk while still introducing differentiated value through automation and shareable views.',
     },
     discover: [
-      'Mapped where manual spreadsheet flows failed to keep ETA and owner context current.',
+      'Mapped where manual spreadsheet flows broke down, which was stale ETAs and unclear ownership. This became the primary constraints shaping the column structure and AI-refresh logic.',
       'Collected leadership, sales, and product inputs to define what strategic differentiation must be visible in demos and daily use.',
       'Benchmarked table-centric collaboration products to identify which patterns to adopt vs avoid.',
     ],
@@ -176,7 +176,7 @@ export const initiatives: Initiative[] = [
     ],
     outcomes: [
       'Beacon positioned a clear strategic difference from generic spreadsheets in both product story and demos.',
-      'I as a designer, learned how to use AI to speed up the design process and how to use rapid prototyping to validate the design decisions.',
+      'AI prototyping compressed my exploration phase from days to hours. More importantly, it changed what I could validate — edge states and data freshness that are hard to feel in a Figma file.',
     ],
     externalLink: {
       label: 'Open interactive table view',
@@ -252,9 +252,9 @@ export const initiatives: Initiative[] = [
       'Standardized status labels so teams interpreted updates the same way.',
     ],
     outcomes: [
-      'It created not much of a huge product impact. But created new upsell opportunities for the team.',
-      'Helped me to push for the new interactions and the new features.',
-      'Improved the way of handover the design work to the engineering team.',
+      'The direct product-metric impact was modest. The bigger payoff was strategic: Order Cards gave the sales team a concrete collaboration story for procurement-focused buyers, opening a new upsell path.',
+      'Designing the order-to-shipment link forced me to advocate for new interaction patterns — inline editing and single-click connections — that the team hadn\'t shipped before.',
+      'This initiative was where I most improved my handoff practice: annotated snapshots with explicit edge-state specs replaced the verbal walkthroughs we\'d been relying on.',
     ],
   },
   {
@@ -271,17 +271,17 @@ export const initiatives: Initiative[] = [
     supplementaryImages: [
       {
         title: 'Profile Profiling',
-        caption: 'Sanitized drop-off view from signup to first meaningful workflow action.',
+        caption: 'Role selection: we chose to ask role because it determined which setup tasks mattered — a procurement lead and a logistics coordinator have different first-value actions.',
         image: 'https://burakkantarci.com/images/beacon/onb-profiling.png',
       },
       {
         title: 'Importing data',
-        caption: 'Mini spreadsheet view to make them familiar with the platform.',
+        caption: 'A miniature spreadsheet within onboarding — we tested this against a drag-and-drop uploader and found that users who saw their data in a table format committed to the next step at a higher rate.',
         image: 'https://burakkantarci.com/images/beacon/onb-add-data.png',
       },
       {
         title: 'Animated rewarding',
-        caption: 'Rewarding animations to make the onboarding more engaging.',
+        caption: 'Milestone animations weren\'t decorative — they marked state transitions (sign-up complete → personalization complete → tracking live) to give users a clear sense of progress.',
         image: 'https://burakkantarci.com/images/beacon/rive-lottie-animations.gif',
       },
       {
@@ -291,7 +291,7 @@ export const initiatives: Initiative[] = [
       },
       {
         title: 'Product Guidance',
-        caption: 'Product guidances to help them understand the platform and how to use it.',
+        caption: 'Contextual guidance surfaces at the moment of need, not in a static help center. Each prompt maps to the next action the user\'s role requires.',
         image: './guidance.png',
       },
     ],
@@ -329,7 +329,7 @@ export const initiatives: Initiative[] = [
       'Shipped personalized onboarding paths connected to core Live Boards.',
     ],
     outcomes: [
-      'Time to first meaningful action improved by after onboarding redesign.',
+      'Time to first meaningful action decreased after the redesign, measured as the gap between account creation and the first live-board interaction.',
       'Early setup completion (including invites and core configuration) improved',
       'Team adopted A/B testing to measure the impact of the onboarding redesign.',
     ],

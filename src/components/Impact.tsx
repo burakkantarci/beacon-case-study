@@ -14,8 +14,8 @@ export default function Impact() {
         <div className="absolute -bottom-10 right-0 h-56 w-56 rounded-full bg-signal/20 blur-3xl" />
         <p className="section-eyebrow text-sand">Impact and Reflection</p>
         <h2 className="section-lede">
-          The biggest impact was how this work improved my craft as a product
-          designer, from strategy to execution.
+          This work shifted Beacon's product direction and sharpened how I make
+          design decisions under constraints.
         </h2>
         <ul className="mt-6 space-y-3 text-fog/90">
           {reflections.map((item) => (

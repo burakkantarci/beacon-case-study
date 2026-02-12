@@ -64,7 +64,7 @@ export default function Initiative({ initiative, index }: InitiativeProps) {
           }
           videoDescription={
             initiative.title === "Live Boards"
-              ? "This is me talking about the comments :)"
+              ? "How comments reduce context-switching in Live Boards."
               : undefined
           }
         />
@@ -73,7 +73,9 @@ export default function Initiative({ initiative, index }: InitiativeProps) {
       <Reveal className="panel mt-5">
         <h4 className="text-2xl">Process notes, outcomes and learning</h4>
         <div className="mt-4">
-          <p className="text-base font-medium text-fog md:text-lg">Process notes</p>
+          <p className="text-base font-medium text-fog md:text-lg">
+            Process notes
+          </p>
           <ul className="mt-3 space-y-2 text-base text-fog/80">
             {[...initiative.develop, ...initiative.deliver].map((point) => (
               <li key={point} className="flex gap-2">
@@ -82,7 +84,9 @@ export default function Initiative({ initiative, index }: InitiativeProps) {
               </li>
             ))}
           </ul>
-          <p className="mt-6 text-base font-medium text-fog md:text-lg">Outcomes and learning</p>
+          <p className="mt-6 text-base font-medium text-fog md:text-lg">
+            Outcomes and learning
+          </p>
           <ul className="mt-3 space-y-2 text-base text-fog/85">
             {initiative.outcomes.map((point) => (
               <li key={point} className="flex gap-2">
@@ -110,7 +114,6 @@ export default function Initiative({ initiative, index }: InitiativeProps) {
           </a>
         </Reveal>
       ) : null}
-
     </section>
   );
 }
