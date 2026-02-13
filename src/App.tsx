@@ -6,6 +6,7 @@ import SuccessfulFlow from "./components/SuccessfulFlow";
 import DoubleDiamond from "./components/DoubleDiamond";
 import Initiative from "./components/Initiative";
 import Impact from "./components/Impact";
+import UserDefinitions from "./components/UserDefinitions";
 import TableOfContents from "./components/TableOfContents";
 import { initiatives } from "./data/caseStudy";
 
@@ -42,6 +43,7 @@ function App() {
     { id: "context", label: "Context" },
     { id: "problem-space", label: "Problem Space", variant: "child" as const },
     { id: "successful-flow", label: "Success Flow", variant: "child" as const },
+    { id: "user-definitions", label: "Users", variant: "child" as const },
     { id: "double-diamond", label: "Design Process" },
     { id: "initiatives", label: "Initiatives" },
     ...orderedInitiatives.map((initiative, index) => ({
@@ -69,6 +71,9 @@ function App() {
       </div>
       <div id="successful-flow" className="scroll-mt-24">
         <SuccessfulFlow />
+      </div>
+      <div id="user-definitions" className="scroll-mt-24">
+        <UserDefinitions />
       </div>
       <div id="double-diamond" className="scroll-mt-24">
         <DoubleDiamond />
