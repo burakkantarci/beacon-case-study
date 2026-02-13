@@ -26,7 +26,7 @@ export default function UserDefinitions() {
     <section className="container-shell mt-20 md:mt-32">
       <Reveal>
         <p className="section-eyebrow">Users</p>
-        <h2 className="section-lede">Who we designed for</h2>
+        <h2 className="section-lede">Who I designed for</h2>
       </Reveal>
 
       <div className="mt-8 grid gap-5 md:grid-cols-3">
