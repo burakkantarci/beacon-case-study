@@ -4,19 +4,34 @@ const users = [
   {
     role: "Logistics Managers",
     description:
-      "Coordinate shipment execution across carriers and forwarders. They need real-time ETA visibility and shared boards to keep operations on track without chasing updates manually.",
+      "Coordinate shipment execution across carriers and forwarders.",
+    painPoints: [
+      "Chasing ETAs manually across email and chat",
+      "Sharing outdated screenshots to align teams",
+      "Rebuilding context for every stakeholder sync",
+    ],
     accent: "bg-harbor",
   },
   {
     role: "Supply Chain Operators",
     description:
-      "Monitor day-to-day tracking data and flag exceptions. They rely on live table views and automated alerts to replace spreadsheet-driven status checks.",
+      "Monitor tracking data day-to-day and flag exceptions.",
+    painPoints: [
+      "Working from spreadsheets that go stale within hours",
+      "Duplicating status updates across disconnected tools",
+      "No single view to catch delays before they escalate",
+    ],
     accent: "bg-moss",
   },
   {
     role: "Sales & Procurement Managers",
     description:
-      "Bridge commercial planning with operational execution. They use order cards and shared boards to maintain visibility into readiness and delivery commitments.",
+      "Bridge commercial planning with operational execution.",
+    painPoints: [
+      "Order context scattered across docs and email threads",
+      "Limited visibility into shipment readiness",
+      "Entering the process late with incomplete information",
+    ],
     accent: "bg-rust",
   },
 ];
@@ -39,6 +54,14 @@ export default function UserDefinitions() {
             <p className="mt-3 text-sm leading-relaxed text-fog/80 md:text-base">
               {user.description}
             </p>
+            <ul className="mt-4 space-y-2 text-sm text-fog/70">
+              {user.painPoints.map((point) => (
+                <li key={point} className="flex gap-2">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rust/70" />
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
           </Reveal>
         ))}
       </div>
